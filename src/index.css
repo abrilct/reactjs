@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* HEADER */
+h2{
+  color: darksalmon;
+  font-family: Roboto, italic;
+}
+
+h4 {
+  color:rgb(194, 72, 72);
+  font-family: Roboto, italic;
+
+}
+
+/*ESTILOS DEL NAVBAR */
+ ul {
+  background-color:  rgb(253, 208, 191);
+}
+
+nav ul li {
+  margin: 1px 40px 1px 40px;
+  padding: 1px 40px 1px 40px;
+  font-family: Roboto, sans serif;
+}
+
+@media only screen and (max-width: 768px) {
+  nav ul li {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #estilo__indicador__Escritorio {
+    display: none;
+  }
+}
+
+

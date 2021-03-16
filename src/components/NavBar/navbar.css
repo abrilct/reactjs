@@ -1,0 +1,18 @@
+nav ul li {
+    margin: 1px 40px 1px 40px;
+    padding: 1px 40px 1px 40px;
+    font-family: Roboto, sans serif;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    nav ul li {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    #estilo__indicador__Escritorio {
+      display: none;
+    }
+  }
