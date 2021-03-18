@@ -1,0 +1,20 @@
+#item_contador{
+    border: rgb(98, 7, 98) 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#botones_contador{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px;
+    margin: 3px;
+
+}
+
+p{
+    font-family: Roboto, sans-serif;
+    color: black;
+    margin: 2px;
+}

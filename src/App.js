@@ -8,7 +8,7 @@ function App() {
       <h2>C. Abril Turlione</h2>
       <h4>Estilos y home</h4>
       <NavBar/>
-      <ItemListContainer />
+      <ItemListContainer text="texto por props" ></ItemListContainer>
     </div>
   );
 }
