@@ -1,6 +1,7 @@
 import './App.css';
 import {NavBar} from './components/NavBar/navbar';
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import {ItemDetailContainer} from "./components/ItemDetailContainer";
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <h2>C. Abril Turlione</h2>
       <h4>Lista de Items</h4>
       <NavBar/>
-      <ItemListContainer text="texto por props" ></ItemListContainer>
+      <ItemListContainer></ItemListContainer>
+      <ItemDetailContainer></ItemDetailContainer>
     </div>
   );
 }
