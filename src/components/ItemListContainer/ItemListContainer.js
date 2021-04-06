@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ItemCount } from "../ItemCount/itemCount.js";
 import { ItemList} from "../ItemList";
 
 
@@ -25,15 +24,14 @@ const datos = [
             promesa.then((datos)=>{
                 setResultadoDeItems(datos)
                 })
-            })
+    })
         
-            return (
-                <div className="container-fluid">
-                    <h3>Productos</h3> 
-                    <ItemList items={resultadoDeItems}/>   
-                    <ItemCount stock="10" initial="0"/>              
-                </div>
-            );
+    return (
+        <div className="container-fluid">
+            <h3>Productos</h3> 
+            <ItemList items={resultadoDeItems}/>   
+        </div>        
+    );
 };
         
 

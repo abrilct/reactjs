@@ -22,9 +22,9 @@ export function ItemCount({stock, initial, onAdd}){
                         <div>{count}</div>
                         <button disabled={count >= stock} className="btn btn-outline-primary" type="button" onClick={addHandle}> + </button>
                     </div>
-                    <button disabled={count <= 1} className="btn btn-outline-success" type="button" onClick={onAdd}> Agregar al carrito </button>   
+                    <button disabled={count <= 1} className="btn btn-outline-success" type="button" onClick={ () => onAdd(count)}> Agregar al carrito </button>   
                 </div>
-            </div>
+            </div> 
         </div>           
     );
 }
