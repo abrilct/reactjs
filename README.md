@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Efecto Tequila Tienda
-E-commerce en progreso, por Candela Abril Turlione.
+E-commerce en progreso, por Candela Abril Turlione para React JS de Coderhouse.
 
 ## Available Scripts
 
