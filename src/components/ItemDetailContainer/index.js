@@ -7,7 +7,7 @@ const datos =
 
 
 const getItems = () => { 
-    return new Promise((resolve)=>{
+    return new Promise((traerDatos, error)=>{
         setTimeout(()=>{
             traerDatos(datos)
         })
@@ -17,7 +17,7 @@ const getItems = () => {
 
 export function ItemDetailContainer() {
     
-    const [datosDelItem, setDatosdelItem] = useState({});
+    const [datosDelItem, setDatosDelItem] = useState({});
 
     useEffect(() => {
         getItems().then((datos)=> {
@@ -25,10 +25,12 @@ export function ItemDetailContainer() {
         }) 
     }, [])
 
-        return 
+        return (
             <div>
                 <h6>Datos del item</h6>
                 <ItemDetail item={datosDelItem}/>
             </div>
+        )
+            
     
 }

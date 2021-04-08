@@ -1,5 +1,9 @@
+
+nav {
+  background-color: blanchedalmond;
+}
 nav ul li {
-    margin: 1px 40px 1px 40px;
+    margin: 1px 80px 1px 40px;
     padding: 1px 40px 1px 40px;
     font-family: Roboto, sans serif;
   }
@@ -16,3 +20,4 @@ nav ul li {
       display: none;
     }
   }
+

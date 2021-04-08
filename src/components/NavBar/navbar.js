@@ -12,20 +12,19 @@ export const NavBar = () => {
 	    	</button>
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav mr-auto">
-					{/* VERIFICAR LA ESTÉTICA DE CÓMO QUEDA SIN LI */}
+					{/* VERIFICAR LA ESTÉTICA*/}
 					<li className="nav-item active">
-						<a className="nav-link" href="#">Efecto Tequila</a>
-					</li>					
+						<NavLink to="/" className="nav-link">HOME</NavLink>
+					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="indumentaria/indumentaria.html">PRUEBA</a>
+						<NavLink to='/listado' className="nav-link">LISTADO</NavLink>
 					</li>
-					<li className="nav-item"><NavLink to='/listado' className="nav-link">LISTADO</NavLink>
+					<li className="nav-item">
+						<NavLink to="/detalle" className="nav-link">DETALLE</NavLink>
 					</li>
-					<li className="nav-item"><NavLink to="/detalle">
-						DETALLE
-					</NavLink></li>
-					
-					<li><CartWidget/></li>
+					<li>
+						<CartWidget/>
+					</li>
 				</ul>
 			</div>
 

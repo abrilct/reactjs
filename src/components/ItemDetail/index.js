@@ -16,13 +16,14 @@ export default function ItemDetail({item}) {
         <div className="row">
             {count}
             <div className="col-lg-6 col-xs-12">
-                <img src="" alt="" class="producto__Imagen"></img>
+                <img src={item.pictureUrl}/>
+                
             </div>
             <div className="col-lg-6 col-xs-12" id="producto__Descripcion">
-                <h4>nombre</h4>
-                <p>descripcio</p>
-                <p>{item.precio}</p>
-                {/* item + . + elemento */}
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+                <p>{item.price}</p>
+                
             </div>
 
             {count == 0 ?
