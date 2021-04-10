@@ -1,0 +1,41 @@
+.button__terminar {
+    border: black solid 1px;
+    border-radius: 3px;
+}
+
+.img__detalle{
+    width:400px;
+}
+
+@media screen and (max-width: 768px) {
+    .img__detalle {
+        width:70%;
+    }
+    
+}
+
+ #producto__Detalle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+ #producto__Descripcion {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    margin: 10px;
+}
+
+/* .producto__counter {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 13px;
+
+
+} */

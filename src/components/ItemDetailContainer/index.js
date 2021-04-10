@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import {ItemDetail} from "../ItemDetail";
 
 const datos =
-    {id:1, title:"Bolso holográfico", price:"4000", pictureUrl:"https://abrilct.github.io/efecto-tequila-tienda/images/bolso-holografico-animal-print.jpg", description:"Bolso holográfico con bolsillo personanizable"}
+    {id:1, title:"Bolso holográfico animal print", price:"4000", pictureUrl:"https://abrilct.github.io/efecto-tequila-tienda/images/bolso-holografico-animal-print.jpg", description:"Bolso holográfico con diseño animal print y bolsillo frontal personanizable."}
 
 
 const getItems = () => { 
@@ -26,8 +26,8 @@ export function ItemDetailContainer() {
     }, [])
 
         return (
-            <div>
-                <h6>Datos del item</h6>
+            <div className="container">
+                
                 <ItemDetail item={datosDelItem}/>
             </div>
         )

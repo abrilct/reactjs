@@ -2,15 +2,22 @@
     border: rgb(98, 7, 98) 1px solid;
     border-radius: 5px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 50%;
+}
+
+#boton_agregar{
+    padding:3px;
 }
 
 #botones_contador{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 2px;
     margin: 3px;
-
 }
 
 p{
