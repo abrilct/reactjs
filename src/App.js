@@ -4,9 +4,11 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import {ItemDetailContainer} from "./components/ItemDetailContainer";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {Header} from "./components/Header";
+import {CartProvider} from "./context/cartContext";
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <div className="App">
         <Header/>
@@ -26,7 +28,7 @@ function App() {
           </Switch>
       </div>
     </BrowserRouter>
-      
+   </CartProvider>   
       
     
   );

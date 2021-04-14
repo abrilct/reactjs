@@ -1,22 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import {Item, item} from "../Item";
 import {ItemCount} from "../ItemCount";
+import {CartContext} from "../../context/cartContext"
 import "./index.css";
 
 export default function ItemDetail({item}) {
 
     const [count, setCount] = useState(0)
+    
+    const {addItem, cart} = useContext (CartContext);
 
     const addHandler = (contador)=>{
         alert ("se agregó un item", contador)
+        addItem (item, contador)
         setCount(contador)
     }
-
+    
     return (
         <div id="producto__Detalle">
-            {count}
-            
+            {count}            
                 <div >
                     <img src={item.pictureUrl} className="img__detalle"/>                
                 </div>
