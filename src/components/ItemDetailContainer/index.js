@@ -1,36 +1,49 @@
 import React, { useEffect, useState } from "react";
-
+import { useParams } from "react-router";
 import {ItemDetail} from "../ItemDetail";
-
-const datos =
-    {id:1, title:"Bolso holográfico animal print", price:"4000", pictureUrl:"https://abrilct.github.io/efecto-tequila-tienda/images/bolso-holografico-animal-print.jpg", description:"Bolso holográfico con diseño animal print y bolsillo frontal personanizable."}
+import {getFirestore} from "../../firebase";
 
 
-const getItems = () => { 
-    return new Promise((traerDatos, error)=>{
-        setTimeout(()=>{
-            traerDatos(datos)
-        })
-    },3000)
+
+const getItems = (id) => { 
+    // return new Promise((traerDatos, error)=>{
+    //     setTimeout(()=>{
+    //         traerDatos(datos.find((e) => e.id === parseInt(id)))
+    //     },3000)
+    // })
+
+    const db = getFirestore();
+    const itemCollection = db.collection('items')
+
+    const item = itemCollection.doc(id)
+    return item.get();
     
 }
 
 export function ItemDetailContainer() {
     
-    const [datosDelItem, setDatosDelItem] = useState({});
+    const [datosDelItem, setDatosDelItem] = useState(null);
+    //el usestate era {}
+    const {itemId, otroId} = useParams()
 
     useEffect(() => {
-        getItems().then((datos)=> {
-            setDatosDelItem(datos)
-        }) 
-    }, [])
+        getItems(itemId)
+        .then((res) => {
+            console.log( 'existe?', res.exists);
 
-        return (
-            <div className="container">
-                
+            if (res.exists){
+                setDatosDelItem( {id:res.id, ...res.data()})
+            }
+            
+        })
+        return;
+    }, [itemId])
+
+        return <>
+                {itemId} - {otroId}
                 <ItemDetail item={datosDelItem}/>
-            </div>
-        )
+        
+        </>
             
     
 }

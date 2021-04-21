@@ -7,39 +7,40 @@ import "./index.css";
 
 export default function ItemDetail({item}) {
 
-    const [count, setCount] = useState(0)
+    const [qty, setQty] = useState(0)
     
     const {addItem, cart} = useContext (CartContext);
 
-    const addHandler = (contador)=>{
-        alert ("se agregó un item", contador)
-        addItem (item, contador)
-        setCount(contador)
+    const addHandler = (quantityToAdd)=>{
+        const qty = parseInt(quantityToAdd)
+        alert ("se agregó un item", qty)
+        addItem (item, qty)
+        setQty(qty)
     }
     
+  //  if (!item) return null;
+
     return (
         <div id="producto__Detalle">
-            {count}            
-                <div >
-                    <img src={item.pictureUrl} className="img__detalle"/>                
-                </div>
+            {qty}            
+            <div >
+                <img src={item?.pictureUrl} className="img__detalle"/>                
+            </div>
             <div>    
                 <div  id="producto__Descripcion">
-                    <h4>{item.title}</h4>
-                    <p>{item.description}</p>
-                    <p>{item.price}</p>                
+                    <h4>{item?.title}</h4>
+                    <p>{item?.description}</p>
+                    <p>{item?.price}</p>                
+                </div>           
+                <div className="producto__counter">
+                    {qty === 0 ?
+                        (item?.title && <ItemCount stock="10" initial="0" onAdd={addHandler}/>)
+                            :
+                        <Link to="/cart">
+                            <button className="button__terminar" >Terminar mi compra</button>
+                        </Link> 
+                    } 
                 </div>
-            
-            
-            <div className="producto__counter">
-                {count == 0 ?
-                    <ItemCount stock="10" initial="0" onAdd={addHandler}/>
-                        :
-                    <Link to="/cart">
-                        <button className="button__terminar" >Terminar mi compra</button>
-                    </Link> 
-                } 
-            </div>
             </div>            
         </div>
     );                       

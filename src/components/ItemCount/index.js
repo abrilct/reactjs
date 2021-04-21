@@ -1,6 +1,7 @@
 import React, {useState } from "react";
 import "./itemCount.css";
 
+
 export function ItemCount({stock, initial, onAdd}){
     const [count, setCount] = useState (parseInt(initial));
 
@@ -14,7 +15,7 @@ export function ItemCount({stock, initial, onAdd}){
 
     return (
                 <div id="item_contador">
-                    <p>Bolso holográfico</p>
+                    {/* <p></p> */}
                     <div id="botones_contador">
                         <button disabled={count <= 0} className="btn btn-outline-primary" type="button" onClick={removeHandle}> - </button>
                         <div>{count}</div>
