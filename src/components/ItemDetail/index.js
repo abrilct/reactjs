@@ -9,7 +9,7 @@ export default function ItemDetail({item}) {
 
     const [qty, setQty] = useState(0)
     
-    const {addItem, cart} = useContext (CartContext);
+    const {addItem} = useContext (CartContext);
 
     const addHandler = (quantityToAdd)=>{
         const qty = parseInt(quantityToAdd)

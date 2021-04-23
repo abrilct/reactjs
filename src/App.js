@@ -19,12 +19,11 @@ function App() {
                 <ItemListContainer />
               </Route>
               
-              <Route path='/accesorios'>
+              <Route>
                 <ItemDetailContainer />
               </Route>
 
               <Route path="/cart">
-                <h4>Este es el cart</h4>
                 <Cart/>
               </Route>
               

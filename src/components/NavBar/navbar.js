@@ -17,10 +17,10 @@ export const NavBar = () => {
 						<NavLink to="/" className="nav-link">HOME</NavLink>
 					</li>
 					<li className="nav-item">
-						<NavLink to='categoria/accesorios' className="nav-link">ACCESORIOS</NavLink>
+						<NavLink to={'/categoria/accesorios'} className="nav-link">ACCESORIOS</NavLink>
 					</li>
 					<li className="nav-item">
-						<NavLink to="/categoria/bolsos" className="nav-link">BOLSOS</NavLink>
+						<NavLink to={'/categoria/bolsos'} className="nav-link">BOLSOS</NavLink>
 					</li>
 					<li>
 						<CartWidget/>
