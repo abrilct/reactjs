@@ -14,8 +14,8 @@ export default function ItemListContainer() {
 
         const db = getFirestore();
         const itemCollection = db.collection(`items`)
-        // const filtrado = itemCollection
-        // .where("categoria", "==", categoryId);
+        const filtrado = itemCollection
+        .where("categoria", "==", "bolsos");
         const promesa = itemCollection.get();
 
             promesa.then((snapshot)=>{
@@ -39,6 +39,4 @@ export default function ItemListContainer() {
         </div>        
     );
 };
-        
-
- 
+    

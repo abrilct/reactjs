@@ -13,16 +13,13 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Header/>
-          <NavBar/>
+          <NavBar/>         
             <Switch>
-              <Route exact path='/'>
-                Todos los productos
-              </Route>
-              <Route path='/listado'>
+              <Route exact path="/">
                 <ItemListContainer />
               </Route>
-
-              <Route path='/detalle'>
+              
+              <Route path='/accesorios'>
                 <ItemDetailContainer />
               </Route>
 

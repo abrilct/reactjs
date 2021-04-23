@@ -28,8 +28,8 @@ export default function ItemDetail({item}) {
             </div>
             <div>    
                 <div  id="producto__Descripcion">
-                    <h4>{item?.title}</h4>
-                    <p>{item?.description}</p>
+                    <h4>{item?.nombre}</h4>
+                    <p>{item?.descripcion}</p>
                     <p>{item?.price}</p>                
                 </div>           
                 <div className="producto__counter">
