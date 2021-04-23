@@ -7,40 +7,39 @@ import "./index.css";
 
 export default function ItemDetail({item}) {
 
-    const [qty, setQty] = useState(0)
+    const [count, setCount] = useState(0)
     
     const {addItem} = useContext (CartContext);
 
-    const addHandler = (quantityToAdd)=>{
-        const qty = parseInt(quantityToAdd)
-        alert ("se agregó un item", qty)
-        addItem (item, qty)
-        setQty(qty)
+    const addHandler = (countToAdd)=>{
+        const count = parseInt(countToAdd)
+        addItem (item, count)
+        setCount(count)
     }
     
-  //  if (!item) return null;
+   if (!item) return null;
 
     return (
-        <div id="producto__Detalle">
-            {qty}            
+        <div id="producto__Detalle">         
             <div >
                 <img src={item?.pictureUrl} className="img__detalle"/>                
             </div>
             <div>    
-                <div  id="producto__Descripcion">
+                <div id="producto__Descripcion">
                     <h4>{item?.nombre}</h4>
                     <p>{item?.descripcion}</p>
-                    <p>{item?.price}</p>                
-                </div>           
-                <div className="producto__counter">
-                    {qty === 0 ?
-                        (item?.title && <ItemCount stock="10" initial="0" onAdd={addHandler}/>)
-                            :
-                        <Link to="/cart">
-                            <button className="button__terminar" >Terminar mi compra</button>
-                        </Link> 
-                    } 
+                    <p>Precio: $ {item?.price}</p>                
                 </div>
+                
+                <div className="producto__counter">
+                {count == 0 ?
+                    <ItemCount stock="10" initial="0" onAdd={addHandler}/>
+                        :
+                    <Link to="/cart">
+                        <button className="button__terminar" >Terminar mi compra</button>
+                    </Link> 
+                } 
+            </div>
             </div>            
         </div>
     );                       

@@ -19,7 +19,7 @@ export function ItemDetailContainer() {
     
     const [datosDelItem, setDatosDelItem] = useState(null);
 
-    const {itemId, otroId} = useParams();
+    const {itemId} = useParams();
 
     useEffect(() => {
         getItems(itemId)
@@ -34,7 +34,6 @@ export function ItemDetailContainer() {
     }, [itemId])
 
         return <>
-                {itemId} - {otroId}
                 <ItemDetail item={datosDelItem}/>
         
         </>

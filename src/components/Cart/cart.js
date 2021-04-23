@@ -17,16 +17,16 @@ export const Cart = () => {
         
         let orden = {}
 
-        orden.date = firebase.firestore.Timestamp.fromDate(new Date());
+        const NewDate = firebase.firestore.Timestamp.fromDate(new Date())
         
         orden.buyer = {name: "Juan", phone: "1234567", email:"djfjsdfk@fjdfj.com"};
         orden.total = totalPrecio;
         orden.items = cart.map(cartItem => {
             const id = cartItem.item.id;
-            const title = cartItem.item.title;
-            const price = cartItem.item.price * cartItem.quantity;
+            const nombre = cartItem.item.nombre;
+            const price = cartItem.item.price * cartItem.count;
 
-            return {id, title, price}
+            return {id, nombre, price}
         })
 
         ordersCol.add(orden)

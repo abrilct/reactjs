@@ -19,7 +19,7 @@ function App() {
                 <ItemListContainer />
               </Route>
               
-              <Route>
+              <Route path="/detalle/:itemId">
                 <ItemDetailContainer />
               </Route>
 
