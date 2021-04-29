@@ -14,7 +14,7 @@ export default function ItemListContainer() {
 
         const db = getFirestore();
         const itemCollection = db.collection(`items`)
-        const filtrado = categoryId ? itemCollection.where("category", "==", categoryId ): itemCollection;
+        const filtrado = categoryId ? itemCollection.where("categoria", "==", categoryId ): itemCollection;
         const promesa = filtrado.get();
         // const promesa = itemCollection.get();
 
@@ -33,8 +33,7 @@ export default function ItemListContainer() {
     }, [categoryId])
         
     return (
-        <div className="container-fluid"> 
-            <h4>Todos los productos</h4>
+        <div className="container-fluid">
             <ItemList items={resultadoDeItems}/>   
         </div>        
     );

@@ -4,6 +4,7 @@ import { CartContext } from "../../context/cartContext";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import { getFirestore } from '../../firebase';
+import "./index.css";
 
 export const Cart = () => {
 
@@ -59,18 +60,21 @@ export const Cart = () => {
 
 
     return (
-        <div>
+        <div className="cart__detalles">
             {!cart.length ?   
-                <h2>No hay Items en el carrito <Link to='/'>Ir al home </Link> </h2>
+                <>
+                <p>Todavía no agregaste productos a tu carrito.</p>
+                <p>Volver a <Link to='/'>HOME</Link></p> 
+                </>
             : (<>
                 {cart.map(cartItem => (
                 <div key={cartItem.item.id} >
-                    <div> Titulo:  {cartItem.item.title}  </div>
-                    <div> cantidad: {cartItem.quantity} </div>
-                    <button onClick={()=> removeItem(cartItem.item.id)}>borrar</button>
+                    <div> Producto:  {cartItem.item.nombre}  </div>
+                    <div> Cantidad: {cartItem.quantity} </div>
+                    <button onClick={()=> removeItem(cartItem.item.id)}>Borrar este producto</button>
                 </div>)
                 )}
-                <div>Total:{totalItems} y {totalPrecio}</div> 
+                <div id="total">Total: {totalItems} productos por $ {totalPrecio}</div> 
                 <button onClick={clear}>Borrar todo</button>
                 <button onClick={generarOrden}>Finalizar compra</button>         
                 </>

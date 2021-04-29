@@ -4,8 +4,8 @@ import "./index.css"
 export const Header = () => {
     return (
         <header>
-            <h1>Efecto Tequila</h1>
-            <h2>DISEÑOS DISIDENTES</h2>
+            <h1 class="header__animacion">Efecto Tequila</h1>
+            <h2 class="header__animacion">DISEÑOS DISIDENTES</h2>
         </header>
     )
 };

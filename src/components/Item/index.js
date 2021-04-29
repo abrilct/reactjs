@@ -10,9 +10,9 @@ export const Item = ({item}) => {
             <div className="card">    
                 <img src={item.pictureUrl} alt="" className="card-img-top"/>
                 <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
+                    <h5 className="card-title">{item.nombre}</h5>
                     <div><p className="card-text">${item.price}</p></div>
-                    <Link to={`/detalle/${item.id}`}>Ver</Link>
+                    <Link to={`/detalle/${item.id}`} id="estilo__link"><p >Ver</p></Link>
                 </div>
             </div>
         </div>

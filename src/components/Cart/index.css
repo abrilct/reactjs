@@ -1,0 +1,30 @@
+p {
+    align-self: center;
+    text-align: left;
+    margin: 10px;
+    
+}
+p Link {
+    text-decoration: none;
+}
+
+
+.cart__detalles{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-family: Roboto, sans serif;
+    
+}
+
+button{
+    border-radius: 8px;
+    background-color:peachpuff ;
+}
+
+button :hover{
+    background-color:orange;
+}

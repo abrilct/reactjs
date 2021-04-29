@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {Header} from "./components/Header";
 import {CartProvider} from "./context/cartContext";
 import {Cart} from "./components/Cart/cart";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
                 <ItemListContainer />
               </Route>
               
+              <Route path="/category/:categoryId">
+                <ItemListContainer />
+              </Route>
+
               <Route path="/detalle/:itemId">
                 <ItemDetailContainer />
               </Route>
@@ -26,8 +31,9 @@ function App() {
               <Route path="/cart">
                 <Cart/>
               </Route>
-              
+            
             </Switch>
+          <Footer />  
         </div>
       </BrowserRouter>
     </CartProvider>   

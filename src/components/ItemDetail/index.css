@@ -31,6 +31,28 @@
     margin: 10px;
 }
 
+#producto__Descripcion {
+    font-family: Roboto, sans serif;
+    margin-top: 20px;
+  }
+  
+  .producto__Imagen {
+    border: solid 3px black;
+    width: 400px;
+    height: 400px;
+    margin: 20px 0px 20px 0px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .producto__Imagen {
+      width: 300px;
+      height: 300px;
+      margin: 20px 0px 20px 0px;
+    }
+  }
+  
+
+
 /* .producto__counter {
     display:flex;
     flex-direction: column;

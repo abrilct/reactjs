@@ -12,21 +12,8 @@ code {
     monospace;
 }
 
-/* HEADER */
-h2{
-  color: darksalmon;
-  font-family: Roboto, italic;
-}
-
-h4 {
-  color:rgb(194, 72, 72);
-  font-family: Roboto, italic;
-
-}
-
 /*ESTILOS DEL NAVBAR */
  ul {
-  background-color: rgb(243, 226, 226);
   display: flex;
   flex-direction: row;
   justify-content: space-around;

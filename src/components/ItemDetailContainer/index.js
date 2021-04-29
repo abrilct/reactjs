@@ -34,7 +34,8 @@ export function ItemDetailContainer() {
     }, [itemId])
 
         return <>
-                <ItemDetail item={datosDelItem}/>
+                {/* antes era {datosDelItem} */}
+                <ItemDetail item={{id:itemId, ...datosDelItem}}/>
         
         </>
             
