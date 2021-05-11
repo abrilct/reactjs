@@ -1,15 +1,20 @@
 h5{
     font-family: "Roboto", sans-serif;
+    color:black;
 }
 
 .card {
     margin: 10px;
 }
-
-#estilo__link {
+#estilo__link{
     text-decoration: none;
+    color:black;
 }
-  
-#estilo__link :hover {
-    color: #a08f8e;
+.card-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+
+

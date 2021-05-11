@@ -6,12 +6,11 @@ const Footer = () => {
     return <>
         <footer>
             <div>
-                <p>Efecto Tequila Tienda</p>
-                <p>Ropa, accesorios y objetos personalizados</p>
+               <p>Desarrollado por Candela Abril Turlione. 2021</p>
             </div>
             <div id="footer__redes">
-                <p><a href="https://www.fb.com/EfectoTequilaTienda" id="estilo__link"><i class="fab fa-facebook" aria-hidden="true"></i> Efecto Tequila Tienda</a></p>
-                <p><a href="https://www.instagram.com/efectotequilatienda" id="estilo__link" ><i class="fab fa-instagram" aria-hidden="true"></i> efectotequilatienda</a></p>
+                <a href="https://www.fb.com/EfectoTequilaTienda" target="_blank" id="estilo__link"><i class="fab fa-facebook" aria-hidden="true" ></i> </a>
+                <a href="https://www.instagram.com/efectotequilatienda" id="estilo__link" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 <p><i class="fas fa-envelope" aria-hidden="true"></i> efectotequilatienda@gmail.com</p>
             </div>
 

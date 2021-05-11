@@ -22,7 +22,7 @@ export default function ItemDetail({item}) {
     return (
         <div id="producto__Detalle">         
             <div >
-                <img src={item?.pictureUrl} className="img__detalle"/>                
+                <img src={item?.pictureUrl} id="producto__Imagen"/>                
             </div>
             <div>    
                 <div id="producto__Descripcion">
@@ -36,7 +36,7 @@ export default function ItemDetail({item}) {
                     <ItemCount stock="10" initial="0" onAdd={addHandler}/>
                         :
                     <Link to="/cart">
-                        <button className="button__terminar" >Terminar mi compra</button>
+                        <button className="button__terminar" >Ver mi carrito</button>
                     </Link> 
                 } 
             </div>

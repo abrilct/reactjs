@@ -6,6 +6,7 @@ p {
 }
 p Link {
     text-decoration: none;
+    color:peachpuff;
 }
 
 
@@ -27,4 +28,30 @@ button{
 
 button :hover{
     background-color:orange;
+}
+
+#estilodellink {
+    text-decoration: none;
+    color: rgb(240, 147, 53);
+}
+
+img {
+    width: 10%;
+    height: 30%;
+}
+
+fieldset{
+    border: solid black 1px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around ;
+    margin:10px;
+    padding:8px;
+    width: fit-content;
+}
+
+input {
+    font-family: Roboto, sans serif;
 }
