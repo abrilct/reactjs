@@ -33,11 +33,6 @@ export const Cart = () => {
            
         })
 
-        // const [name, setName] = useState("");
-        // const [email, setEmail] = useState("");
-        // const [phone, setPhone] = useState("");
-
-
         ordersCol.add(orden)
         .then((IdDocumento) => {
             console.log(IdDocumento.id)
@@ -69,96 +64,41 @@ export const Cart = () => {
         <div className="cart__detalles">
             {!cart.length ?   
                 <>
-                <p>Todavía no agregaste productos a tu carrito.</p>
-                <p>Seguí explorando nuestros productos en <Link to='/' id="estilodellink">HOME</Link></p> 
+                    <p>Todavía no agregaste productos a tu carrito.</p>
+                    <p>Seguí explorando nuestros productos en <Link to='/' id="estilodellink">HOME</Link></p> 
                 </>
-                : (<>
-                    {/* Hacer una pequeña tabla para estos elementos */}
-                    {cart.map(cartItem => (
-                    <div key={cartItem.item.id} >
-                        <div> Producto:  {cartItem.item.nombre} </div> <div> <img src={cartItem.item.pictureUrl} /></div>
-                    
-                        <div> Cantidad: {cartItem.quantity} </div>
-                    
-                        <button onClick={()=> removeItem(cartItem.item.id)}>Borrar este producto</button>
-                    </div>)
-                    )}
-                    <div id="total">Total: {totalItems} productos por $ {totalPrecio}</div>
-                    <button onClick={clear}>Borrar todo</button>
-                
-                       <Form />
-
-                    <button onClick={generarOrden}>Finalizar compra</button>         
+                : (<> 
+                    <div className="container">
+                        <div>
+                            <div className="carrito__detalles1">
+                                <h6 id="nombreDelProducto"></h6>
+                                <h6>Cantidad</h6>
+                                <h6>Precio por unidad</h6>
+                            </div> 
+                            {cart.map(cartItem => (                        
+                                <div key={cartItem.item.id} className="carrito__foto_y_descripcion">
+                                    <img src={cartItem.item.pictureUrl}/> 
+                                    <div className="carrito__foto_y_descripcion2">         
+                                        <p>{cartItem.item.nombre}</p> 
+                                        <p>{cartItem.quantity} u.</p>
+                                        <p>${cartItem.item.price}</p>
+                                        <button onClick={()=> removeItem(cartItem.item.id)} className="estilo__boton"><i class="far fa-times-circle"></i></button>       
+                                    </div>                                                                 
+                                </div>)
+                            )}
+                            <div className="carrito__detalles4">
+                                <h6 id="total">Total:</h6>
+                                <p>{totalItems} u. por ${totalPrecio}</p>
+                            </div>     
+                            <button onClick={clear}>Limpiar carrito</button>
+                        </div>
+                        <div className="carrito__final">
+                            <Form />
+                            
+                        </div>                         
+                    </div>        
                 </>)
             }
         </div>
     )
 }
-
-// const Checkout = () => {
-// 	const [name, setName] = useState("");
-// 	const [email, setEmail] = useState("");
-// 	const [phone, setPhone] = useState("");
-
-// const guardarOrden = (e) => {
-// 	e.preventDefault();
-// 	const comprador = { name, phone, email};
-
-// };
-
-// 	return (
-// <>
-// 					<form action="" onSubmit={guardarOrden}>
-// 						<label className="" htmlFor="nombreApellido">
-// 							Name and Surname
-// 						</label>
-// 						<input
-// 							className="h-8 mb-2 rounded w-full"
-// 							type="text"
-// 							name="name"
-// 							id="nombreApellido"
-// 							onChange={(e) => {
-// 								setName(e.target.value);
-// 							}}
-// 						/>
-// 					</form>
-// 					<form>
-// 						<label className="" htmlFor="Email">
-// 							Email
-// 						</label>
-// 						<input
-// 							className="h-8 mb-2 rounded w-full"
-// 							type="text"
-// 							name="email"
-// 							id="email"
-// 							onChange={(e) => {
-// 								setEmail(e.target.value);
-// 							}}
-// 						/>
-// 					</form>
-// 					<form>
-// 						<label className="" htmlFor="phone">
-// 							Telephone
-// 						</label>
-// 						<input
-// 							className="h-8 mb-2 rounded w-full"
-// 							type="text"
-// 							name="phone"
-// 							id="phone"
-// 							onChange={(e) => {
-// 								setPhone(e.target.value);
-// 							}}
-// 						/>
-// 					</form>
-// 					<button
-// 						type="submit"
-						
-// 						onClick={guardarOrden}
-// 					>
-// 						Confirm purchase
-// 					</button>
-// 		</>
-// 	);
-// };
-
-// export default Checkout;

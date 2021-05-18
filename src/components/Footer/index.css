@@ -36,6 +36,9 @@ footer #footer__redes {
 #estilo__link :hover {
     color: #a08f8e;
 }
+footer #footer__redes i {
+    color:whitesmoke;
+}
 
 @media only screen and (max-width: 768px) {
     footer {
@@ -53,4 +56,3 @@ footer #footer__redes {
       font-size: smaller;
     }
 }
-

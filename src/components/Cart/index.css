@@ -9,25 +9,83 @@ p Link {
     color:peachpuff;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-.cart__detalles{
+.carrito__final {
+    display: flex;
+    flex-direction: column;
+}
+/* .cart__detalles{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: left;
-    align-items: flex-start;
+    /* align-items: flex-start;
     justify-content: space-around;
-    font-family: Roboto, sans serif;
-    
+    font-family: Roboto, sans serif;      
+} */
+
+.carrito__foto_y_descripcion{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carrito__foto_y_descripcion2{
+    width:max-content;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+/* .carrito__detalles{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 50px;  
+}*/
+.carrito__detalles1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-end;
+    border-bottom: 1px solid black;
+    margin: 3px;
+}
+
+/*
+.carrito__detalles2 {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+} */
+
+.carrito__detalles4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 button{
     border-radius: 8px;
-    background-color:peachpuff ;
+    background-color:rgb(248, 226, 207, 6, 36);
+    width: max-content;
+    font-size: small;
+}
+button :hover{
+    background-color:rgb(250, 150, 110);
 }
 
-button :hover{
-    background-color:orange;
+.estilo__boton {
+    background-color: transparent;
+    border: none;
+}
+.estilo__boton :hover{
+    background-color: transparent;
 }
 
 #estilodellink {
@@ -36,22 +94,6 @@ button :hover{
 }
 
 img {
-    width: 10%;
-    height: 30%;
-}
-
-fieldset{
-    border: solid black 1px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content:space-around ;
-    margin:10px;
-    padding:8px;
-    width: fit-content;
-}
-
-input {
-    font-family: Roboto, sans serif;
+    width: 15%;
+    height: 35%;
 }
