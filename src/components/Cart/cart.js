@@ -94,7 +94,7 @@ export const Cart = () => {
                         </div>
                         <div className="carrito__final">
                             <Form />
-                            
+                            <p>Cuando recibamos tus datos de contacto, nos comunicaremos para personalizar tus productos como vos quieras.</p>
                         </div>                         
                     </div>        
                 </>)
